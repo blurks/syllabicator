@@ -42,16 +42,16 @@ class Node:
         word (str): the word to match.
 
         Returns:
-        str:the longest match found. None if no match was found.
+        str:the longest match found. Empty string if no match was found.
         """
         child = self.children.get(word[0:1])
-        childsMatch = ''
-        if child != None:
-            childsMatch = child.longestMatch(word[1:])
-        if childsMatch != '':
-            return self.letter + childsMatch
+        if child is None:
+            return ""
+        childsMatch = child.longestMatch(word[1:])
+        if childsMatch != "":
+            return word[0] + childsMatch
         else:
-            return self.letter if self.isFinal() else ''
+            return word[0] if child.isFinal() else ""
 
 
     def get(self, word: str) -> object:
@@ -137,6 +137,15 @@ class PrefixTree(Node):
 
 
     def longestMatch(self, word: str) -> str:
+        """Return the longest matching prefix in the trie for the given word.
+
+        Parameters:
+        word (str): the word to match.
+
+        Returns:
+        str:the longest match found. None if no match was found and "" not in Trie.
+        """
+
         m = super().longestMatch(word)
         if m == '':
             return '' if self.isFinal() else None
