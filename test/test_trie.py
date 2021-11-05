@@ -13,7 +13,7 @@ class TestNode(unittest.TestCase):
     def test_longestMatch(self):
         n = Node("a")
         n.insert("xy")
-        self.assertEqual(n.longestMatch("xyz"), "axy", "match not found or incorrect")
+        self.assertEqual(n.longestMatch("xyz"), "xy", "match not found or incorrect")
         self.assertEqual(n.longestMatch("qwe"), "", "match found where there is none")
 
     def test_get(self):
@@ -32,6 +32,12 @@ class TestNode(unittest.TestCase):
                          "Wrong Trie structure after delete")
         self.assertRaises(KeyError,
                           lambda x: n.delete(x), "qwe")
+
+    def test_contains(self):
+        n = Node("a")
+        n.insert("xy")
+        self.assertTrue("xy" in n)
+        self.assertFalse("qw" in n)
 
 
 if __name__ == "__main__":
