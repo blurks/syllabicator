@@ -53,5 +53,48 @@ class TestPrefixTree(TestNode):
                          "Insert of empty word resulted in wrong Trie structure.")
 
 
+
+class TestSuffixTree(unittest.TestCase):
+    def test_insert(self):
+        n = SuffixTree()
+        n.insert("yx", 1)
+        self.assertEqual(repr(n),
+                         "'': (None, {'x': (None, {'y': (1, set())})})",
+                         "Wrong Trie structure after insert")
+
+
+    def test_longestMatch(self):
+        n = SuffixTree()
+        n.insert("xy")
+        self.assertEqual(n.longestMatch("zxy"), "xy", "match not found or incorrect")
+        self.assertEqual(n.longestMatch("qwe"), None, "match found where there is none")
+
+
+    def test_get(self):
+        n = SuffixTree()
+        n.insert("xyz", 5)
+        self.assertEqual(n.get("xyz"), 5, "item not found")
+        self.assertEqual(n.get("qwe"), None, "nonexistent item found")
+
+
+    def test_delete(self):
+        n = SuffixTree()
+        n.insert("yx", 1)
+        n.insert("x")
+        n.delete("x")
+        self.assertEqual(repr(n),
+                         "'': (None, {'x': (None, {'y': (1, set())})})",
+                         "Wrong Trie structure after delete")
+        self.assertRaises(KeyError,
+                          lambda x: n.delete(x), "qwe")
+
+
+    def test_contains(self):
+        n = SuffixTree()
+        n.insert("xy")
+        self.assertTrue("xy" in n)
+        self.assertFalse("qw" in n)
+
+
 if __name__ == "__main__":
     unittest.main()
