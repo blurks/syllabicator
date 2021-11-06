@@ -1,3 +1,5 @@
+"""Trie datastructures"""
+
 class Node:
     """A Node of a Trie."""
     def __init__(self, letter: str, value: object = None) -> None:
@@ -165,7 +167,8 @@ class SuffixTree(PrefixTree):
 
 
     def longestMatch(self, word: str) -> str:
-        return super().longestMatch(word[::-1])[::-1]
+        m = super().longestMatch(word[::-1])
+        return None if m is None else m[::-1]
 
 
     def get(self, word: str) -> object:
