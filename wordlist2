@@ -1,0 +1,27 @@
+Ein Trie o|der Prä|fix|baum ist ei|ne Da|ten|struk|tur, die in der In|for|ma|tik
+zum Su|chen nach Zei|chen|ke|tten ver|wen|det wird. Es han|delt sich da|bei um
+ei|nen spe|zie|llen Such|baum zur gleich|zei|ti|gen Spei|che|rung meh|re|rer
+Ze|chen|ke|tten. Da|bei be|in|hal|ten Tries ei|ne Art der Da|ten|kom|pre|ssion,
+da ge|mein|sa|me Prä|fi|xe der Zei|chen|ke|tten nur ein|mal ge|spei|chert wer|den.
+
+Ein Trie wird ü|ber ei|ne Me|nge von be|lie|bi|gen Zei|chen|ke|tten
+auf|ge|baut. Je|de aus|ge|hen|de Kan|te ei|nes Kno|tens inn|er|halb ei|nes Tries
+ist mit ei|nem ein|zel|nen Zei|chen ver|se|hen, so|dass ein Pfad be|gi|nnend
+bei der Wur|zel bis zu ei|nem Blatt im Trie ei|ne der Zei|chen|ke|tten
+dar|stellt, aus de|nen der Baum kon|stru|iert wor|den ist.
+
+Tries fin|den ih|re An|wen|dung im Be|reich des In|for|ma|tion. Dort
+wer|den sie zur In|de|xie|rung von Tex|ten ver|wen|det, um e|ffi|zient
+be|stimm|te An|fra|gen an den Text zu be|ant|wor|ten.
+
+Kom|pak|te Tries o|der auch ei|ne spe|zie|lle Va|ri|an|te von
+kom|pak|ten Tries sind im Be|zug auf Spei|cher|platz|ver|brauch op|ti|mier|te
+Va|ri|an|ten des Tries. Hier wer|den a|lle Kno|ten, von de|nen nur ei|ne Kan|te
+aus|geht, mit ih|rem je|wei|li|gen Nach|fol|ger zu|sa|mmen|ge|fasst.
+
+Der Aus|druck Trie wur|de von Ed|ward Fred|kin in An|leh|nung an den Be|griff
+In|for|ma|tion Re|trie|val vor|ge|schla|gen. Die|ser Au|tor spricht ihn wie den
+eng|li|schen Be|griff aus. Ei|ne an|de|re üb|li|che Aus|spra|che
+ist wie der eng|li|sche Be|griff, wo|durch der Trie ver|bal von
+der Da|ten|struk|tur Tree un|ter|schie|den wird. Die|se zwei|te Va|ri|an|te
+hat sich mitt|ler|wei|le durch|ge|setzt.
