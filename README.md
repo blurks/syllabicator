@@ -10,7 +10,7 @@ The program is designed to work on phonetic transcriptions, but you
 also should get decent results for orthographic data from languages
 where orthography is closely to pronunciation.
 [wordlist2](./wordlist2) is an example of German orthographic training
-data.
+data (Source: https://de.wikipedia.org/wiki/Trie).
 
 
 ## Usage examples
